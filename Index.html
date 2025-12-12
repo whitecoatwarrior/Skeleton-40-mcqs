@@ -1,0 +1,3054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & Movement MCQs Portal - MDCAT/NUMS Preparation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- KaTeX for equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <style>
+        :root {
+            --primary: #1a56db;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --light: #f8fafc;
+            --dark: #1e3a8a;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --info: #3b82f6;
+            --background: #f0f9ff;
+            --card-bg: #ffffff;
+            --text-primary: #1e3a8a;
+            --text-secondary: #4b5563;
+            --border-radius: 5px;
+            --shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.2s ease;
+            --compact-spacing: 3px;
+        }
+
+        .dark-mode {
+            --primary: #3b82f6;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --light: #1e293b;
+            --dark: #f1f5f9;
+            --background: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            position: relative;
+            font-size: 8.1px;
+            line-height: 1.1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4.86px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            margin-bottom: 6.48px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
+            animation: pulse 15s infinite linear;
+        }
+
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 4.32px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo h1 {
+            font-size: 0.972rem;
+            font-weight: 800;
+            margin-bottom: 1.62px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo p {
+            font-weight: 500;
+            font-size: 0.486rem;
+            opacity: 0.9;
+        }
+
+        .header-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-content h1 {
+            font-size: 0.648rem;
+            margin-bottom: 4.32px;
+            color: #ffd700;
+        }
+
+        .header-content p {
+            font-size: 0.486rem;
+            line-height: 1.1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 15.12px;
+            height: 15.12px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            position: absolute;
+            top: 6.48px;
+            right: 6.48px;
+            z-index: 10;
+        }
+
+        .menu-toggle span {
+            width: 15.12px;
+            height: 1.62px;
+            background: white;
+            border-radius: 1.62px;
+            transition: var(--transition);
+            position: relative;
+            transform-origin: center;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(3.24px, 3.24px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(4.32px, -4.32px);
+        }
+
+        /* Navigation Styles */
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 6.48px;
+            position: relative;
+        }
+
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+        }
+
+        .nav-header h2 {
+            font-size: 0.729rem;
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: none;
+            width: 25.92px;
+            height: 12.96px;
+            border-radius: 12.96px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 1.62px;
+            box-shadow: var(--shadow);
+        }
+
+        .theme-toggle span {
+            width: 9.72px;
+            height: 9.72px;
+            border-radius: 50%;
+            background: var(--primary);
+            position: absolute;
+            transition: var(--transition);
+            left: 1.62px;
+        }
+
+        .theme-toggle.dark span {
+            left: calc(100% - 11.34px);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 2.43px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+            padding: 4.05px 4.86px;
+            background: var(--card-bg);
+            border: none;
+            border-radius: var(--border-radius);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-btn.active {
+            background: #1e3a8a;
+            color: white;
+        }
+
+        /* Panel Styles */
+        .panel {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.86px;
+            box-shadow: var(--shadow);
+            margin-bottom: 6.48px;
+            transition: var(--transition);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+            padding-bottom: 4.05px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-title {
+            font-size: 0.648rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+        }
+
+        .panel-actions {
+            display: flex;
+            gap: 2.43px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.43px;
+            padding: 2.43px 4.86px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: #1e3a8a;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #3b82f6;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #0da271;
+            transform: translateY(-1px);
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.86px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 4.86px;
+        }
+
+        .card:hover {
+            transform: translateY(-1.5px);
+            box-shadow: 0 2.43px 6.48px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+            margin-bottom: 4.05px;
+            padding-bottom: 4.05px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-size: 0.567rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            gap: 4.86px;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+            color: white;
+            padding: 9.72px 0;
+            margin-top: auto;
+            font-size: 0.486rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 6.48px;
+            margin-top: 6.48px;
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6.48px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-in {
+            animation: slideIn 0.3s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-6.48px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* MCQ Card Styles */
+        .mcq-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .mcq-info {
+            flex-grow: 1;
+            margin-bottom: 4.86px;
+        }
+
+        .mcq-id {
+            font-weight: 700;
+            font-size: 0.567rem;
+            color: #1e3a8a;
+            margin-bottom: 1.62px;
+        }
+
+        .mcq-subject {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.43px;
+        }
+
+        .mcq-chapter {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.43px;
+            font-weight: 600;
+        }
+
+        .mcq-details {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+            margin-bottom: 4.05px;
+        }
+
+        .start-btn {
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 4.05px 6.48px;
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .start-btn:hover {
+            background: #3b82f6;
+            transform: translateY(-1px);
+        }
+
+        /* Stats Panel */
+        .stats-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(64.8px, 1fr));
+            gap: 4.05px;
+            margin-bottom: 4.86px;
+        }
+
+        .stat-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.05px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-value {
+            font-size: 0.729rem;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+
+        .stat-label {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Explanation Section Styles */
+        .explanation-section {
+            margin-bottom: 12.15px;
+            padding: 9.72px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .explanation-header {
+            display: flex;
+            align-items: center;
+            gap: 6.48px;
+            margin-bottom: 6.48px;
+            padding-bottom: 4.86px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .explanation-icon {
+            width: 24.3px;
+            height: 24.3px;
+            background: #1e3a8a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.81rem;
+        }
+
+        .explanation-title {
+            font-size: 0.729rem;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+
+        .explanation-content {
+            font-size: 0.567rem;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+
+        .explanation-content h4 {
+            font-size: 0.648rem;
+            margin: 6.48px 0 3.24px;
+            color: #1e3a8a;
+        }
+
+        .explanation-content p {
+            margin-bottom: 4.86px;
+        }
+
+        .explanation-content ul, .explanation-content ol {
+            margin-left: 16.2px;
+            margin-bottom: 6.48px;
+        }
+
+        .explanation-content li {
+            margin-bottom: 2.43px;
+        }
+
+        .mechanism-diagram {
+            text-align: center;
+            margin: 9.72px 0;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .key-concept {
+            background: rgba(30, 58, 138, 0.1);
+            border-left: 3.24px solid #1e3a8a;
+            padding: 6.48px;
+            margin: 6.48px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .key-concept-title {
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 3.24px;
+            font-size: 0.567rem;
+        }
+
+        /* MCQ Detail Styles */
+        .mcq-detail-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 9.72px;
+            margin-bottom: 9.72px;
+            box-shadow: var(--shadow);
+        }
+
+        .mcq-question {
+            font-size: 0.648rem;
+            font-weight: 600;
+            margin-bottom: 6.48px;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+
+        .mcq-options {
+            margin-bottom: 9.72px;
+        }
+
+        .mcq-option {
+            padding: 4.05px 6.48px;
+            margin-bottom: 3.24px;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            font-size: 0.567rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border-left: 2.43px solid transparent;
+        }
+
+        .mcq-option:hover {
+            background: rgba(30, 58, 138, 0.05);
+        }
+
+        .mcq-option.selected {
+            border-left-color: #1e3a8a;
+            background: rgba(30, 58, 138, 0.1);
+        }
+
+        .mcq-option.correct {
+            border-left-color: var(--success);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .mcq-option.incorrect {
+            border-left-color: #dc3545;
+            background: rgba(220, 53, 69, 0.1);
+        }
+
+        .mcq-explanation {
+            margin-top: 9.72px;
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            font-size: 0.486rem;
+            line-height: 1.4;
+            display: none;
+        }
+
+        .mcq-explanation.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .explanation-title {
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 4.05px;
+            font-size: 0.567rem;
+        }
+
+        .mcq-actions {
+            display: flex;
+            gap: 4.86px;
+            margin-top: 6.48px;
+        }
+
+        /* Progress Tracking */
+        .progress-section {
+            margin-top: 9.72px;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+        }
+
+        .progress-title {
+            font-size: 0.648rem;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+
+        .progress-stats {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+        }
+
+        .progress-bar {
+            height: 6.48px;
+            background: #e5e7eb;
+            border-radius: 3.24px;
+            overflow: hidden;
+            margin-bottom: 4.86px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--success);
+            border-radius: 3.24px;
+            transition: width 0.5s ease;
+        }
+
+        /* Welcome Animation */
+        .welcome-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 1;
+            transition: opacity 0.8s ease;
+        }
+
+        .welcome-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .welcome-content {
+            text-align: center;
+            color: white;
+            padding: 12.15px;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 9.72px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4.86px 16.2px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-content h2 {
+            font-size: 1.458rem;
+            margin-bottom: 9.72px;
+            background: linear-gradient(90deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmer 2.5s infinite;
+        }
+
+        .welcome-content p {
+            font-size: 0.648rem;
+            margin-bottom: 12.15px;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        .welcome-logo {
+            font-size: 2.025rem;
+            margin-bottom: 12.15px;
+            color: #ffd700;
+            text-shadow: 0 0 12.15px rgba(255, 215, 0, 0.5);
+            animation: pulseWelcome 1.5s infinite;
+        }
+
+        @keyframes pulseWelcome {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -100% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 12.15px;
+            right: 12.15px;
+            background: #25D366;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.053rem;
+            box-shadow: 0 2.43px 6.48px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 3.24px 8.1px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Conceptual Q&A Styles */
+        .conceptual-qa {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 8.1px;
+            margin-bottom: 8.1px;
+            border-left: 3.24px solid var(--accent);
+        }
+
+        .qa-question {
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 4.05px;
+            font-size: 0.567rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 4.05px;
+        }
+
+        .qa-question i {
+            color: var(--accent);
+            margin-top: 1.62px;
+        }
+
+        .qa-answer {
+            font-size: 0.486rem;
+            line-height: 1.3;
+            color: var(--text-secondary);
+            padding-left: 12.15px;
+        }
+
+        .qa-answer strong {
+            color: #1e3a8a;
+        }
+
+        /* Equation styling */
+        .equation {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 4.86px;
+            border-radius: var(--border-radius);
+            margin: 4.86px 0;
+            text-align: center;
+            font-family: 'KaTeX_Main', 'Times New Roman', serif;
+        }
+
+        .dark-mode .equation {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .katex {
+            font-size: 1em !important;
+        }
+
+        /* Exam Specific Info */
+        .exam-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(97.2px, 1fr));
+            gap: 4.86px;
+            margin-bottom: 9.72px;
+        }
+
+        .exam-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 6.48px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .exam-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3.24px 8.1px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-icon {
+            width: 24.3px;
+            height: 24.3px;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 4.05px;
+            font-size: 0.81rem;
+        }
+
+        .exam-name {
+            font-weight: 700;
+            font-size: 0.486rem;
+            color: #1e3a8a;
+            margin-bottom: 1.62px;
+        }
+
+        .exam-desc {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 9.72px 0;
+            font-size: 0.486rem;
+        }
+
+        th {
+            background: #1e3a8a;
+            color: white;
+            padding: 4.05px;
+            text-align: left;
+        }
+
+        td {
+            padding: 4.05px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(30, 58, 138, 0.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .main-nav {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: var(--card-bg);
+                border-radius: var(--border-radius);
+                box-shadow: var(--shadow);
+                padding: 4.86px;
+                z-index: 100;
+                width: 129.6px;
+                display: none;
+            }
+            
+            .main-nav.active {
+                display: flex;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 4.05px;
+            }
+            
+            header {
+                padding: 4.86px;
+            }
+            
+            .logo h1 {
+                font-size: 0.81rem;
+            }
+            
+            .panel {
+                padding: 4.86px;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 2.43px;
+            }
+            
+            .panel-actions {
+                flex-direction: column;
+            }
+            
+            .welcome-content {
+                padding: 9.72px;
+                margin: 6.48px;
+            }
+            
+            .welcome-content h2 {
+                font-size: 1.053rem;
+            }
+            
+            .welcome-content p {
+                font-size: 0.567rem;
+            }
+            
+            .welcome-logo {
+                font-size: 1.62rem;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 3.24px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1e3a8a;
+            border-radius: 1.62px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+
+        /* Additional Styles for Support & Movement */
+        .mcat-tip {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 3.24px solid #f59e0b;
+            padding: 6.48px;
+            margin: 6.48px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .mcat-tip-title {
+            font-weight: 700;
+            color: #f59e0b;
+            margin-bottom: 3.24px;
+            font-size: 0.567rem;
+        }
+
+        .option-analysis {
+            margin-top: 4.86px;
+            padding: 4.86px;
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: var(--border-radius);
+        }
+
+        .option-analysis h5 {
+            font-size: 0.567rem;
+            color: #1e3a8a;
+            margin-bottom: 2.43px;
+        }
+
+        .reference-note {
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 0.405rem;
+            margin-top: 3.24px;
+        }
+
+        .important-point {
+            background: rgba(255, 107, 107, 0.1);
+            border-left: 3.24px solid #dc3545;
+            padding: 6.48px;
+            margin: 6.48px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .important-point-title {
+            font-weight: 700;
+            color: #dc3545;
+            margin-bottom: 3.24px;
+            font-size: 0.567rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Animation -->
+    <div class="welcome-overlay" id="welcome-overlay">
+        <div class="welcome-content scale-in">
+            <div class="welcome-logo">
+                <i class="fas fa-bone"></i>
+            </div>
+            <h2>Support & Movement MCQs Portal</h2>
+            <p>Master Support & Movement for MDCAT/NUMS with 40 Conceptual MCQs & Detailed Explanations</p>
+            <button class="btn btn-primary" id="start-btn" style="padding: 4.86px 9.72px; font-size: 0.648rem;">
+                Get Started <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://whatsapp.com/channel/0029VbBeueg0QeajGumGWb0f" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="container">
+        <header>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="logo">
+                <h1>Support & Movement MCQs Portal</h1>
+                <p>MDCAT | NUMS | HEC | Competition Exam Preparation</p>
+            </div>
+            
+            <div class="header-content">
+                <h1>40 High-Yield MCQs on Support & Movement</h1>
+                <p>Master skeletal system, joints, and muscular system with 3-4 step thinking and detailed explanations</p>
+            </div>
+        </header>
+
+        <!-- Exam Specific Information -->
+        <div class="panel fade-in">
+            <div class="panel-header">
+                <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Exam Preparation Focus</h3>
+            </div>
+            <div class="exam-info">
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="exam-name">MDCAT</div>
+                    <div class="exam-desc">6-8% weightage in Biology</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="exam-name">NUMS</div>
+                    <div class="exam-desc">Bone & Muscle questions</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="exam-name">AKU</div>
+                    <div class="exam-desc">Clinical applications</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="exam-name">Competition</div>
+                    <div class="exam-desc">Advanced concepts</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <div class="nav-header">
+                <h2>Navigation</h2>
+                <button class="theme-toggle" id="theme-toggle">
+                    <span></span>
+                </button>
+            </div>
+            
+            <div class="main-nav" id="main-nav">
+                <button class="nav-btn active" data-tab="all-mcqs">
+                    <i class="fas fa-question-circle"></i>
+                    <span>All 40 MCQs</span>
+                </button>
+                <button class="nav-btn" data-tab="skeleton">
+                    <i class="fas fa-bone"></i>
+                    <span>Skeletal System</span>
+                </button>
+                <button class="nav-btn" data-tab="joints">
+                    <i class="fas fa-link"></i>
+                    <span>Joints</span>
+                </button>
+                <button class="nav-btn" data-tab="muscles">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>Muscular System</span>
+                </button>
+                <button class="nav-btn" data-tab="progress">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stat-item">
+                <div class="stat-value" id="total-mcqs">40</div>
+                <div class="stat-label">Total MCQs</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="conceptual-qa">25</div>
+                <div class="stat-label">Key Concepts</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="completed-mcqs">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="accuracy">0%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+        </div>
+
+        <!-- Notice Message -->
+        <div class="panel fade-in" style="border-left: 3.24px solid #f59e0b;">
+            <div class="panel-header">
+                <h3 class="panel-title"><i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i> Important Notice</h3>
+            </div>
+            <div class="explanation-content">
+                <p><strong>Attention Students:</strong> This portal contains 40 high-yield MCQs on Support & Movement. All questions are designed with 3-4 step thinking and conceptual understanding. If you find any discrepancy, inform via WhatsApp channel. MCQs cover all exam patterns: Application-based (40%), Conceptual (35%), Recall-based (15%), and Analysis (10%).</p>
+            </div>
+        </div>
+
+        <!-- All 40 MCQs Tab -->
+        <div class="tab-content active" id="all-mcqs-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="explanation-title">Complete Support & Movement MCQs - 40 Questions</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>MCQ Distribution by Topic:</h4>
+                    <table>
+                        <tr>
+                            <th>Topic</th>
+                            <th>Number of MCQs</th>
+                            <th>Difficulty Level</th>
+                            <th>Exam Focus</th>
+                        </tr>
+                        <tr>
+                            <td>Skeletal System</td>
+                            <td>12</td>
+                            <td>Medium-Hard</td>
+                            <td>MDCAT/NUMS</td>
+                        </tr>
+                        <tr>
+                            <td>Joints & Articulations</td>
+                            <td>10</td>
+                            <td>Medium</td>
+                            <td>All Exams</td>
+                        </tr>
+                        <tr>
+                            <td>Muscular System</td>
+                            <td>18</td>
+                            <td>Hard</td>
+                            <td>AKU/Competition</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong>40</strong></td>
+                            <td><strong>Mixed</strong></td>
+                            <td><strong>All Exams</strong></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Strategy</div>
+                        <ol>
+                            <li><strong>Step 1:</strong> Read the question carefully and identify key terms</li>
+                            <li><strong>Step 2:</strong> Recall relevant concepts from textbook theory</li>
+                            <li><strong>Step 3:</strong> Eliminate obviously wrong options</li>
+                            <li><strong>Step 4:</strong> Choose the best answer based on conceptual understanding</li>
+                            <li><strong>Step 5:</strong> Verify your answer with textbook knowledge</li>
+                        </ol>
+                    </div>
+                    
+                    <h4>Common MCQ Patterns:</h4>
+                    <div class="grid grid-2">
+                        <div>
+                            <h5>1. Direct Recall Questions:</h5>
+                            <ul>
+                                <li>Definition-based questions</li>
+                                <li>Structural identification</li>
+                                <li>Functional classification</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>2. Application Questions:</h5>
+                            <ul>
+                                <li>Clinical scenario applications</li>
+                                <li>Mechanism analysis</li>
+                                <li>Comparative anatomy</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>3. Analysis Questions:</h5>
+                            <ul>
+                                <li>Multi-step reasoning</li>
+                                <li>Exception identification</li>
+                                <li>Sequence arrangement</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>4. Conceptual Questions:</h5>
+                            <ul>
+                                <li>Principle understanding</li>
+                                <li>Theory application</li>
+                                <li>Integrated concepts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Overall Progress - 40 MCQs</div>
+                    <div class="progress-stats"><span id="all-completed">0</span>/40 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="all-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-question-circle"></i> All 40 Support & Movement MCQs</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-all">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="all-mcqs-container">
+                    <!-- 40 MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Skeletal System Tab -->
+        <div class="tab-content" id="skeleton-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <div class="explanation-title">Skeletal System: Structure, Function & Clinical Relevance</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Key Concepts Tested in MCQs:</h4>
+                    <div class="mcat-tip">
+                        <div class="mcat-tip-title">MDCAT Focus Areas</div>
+                        <ol>
+                            <li><strong>Bone Composition:</strong> Organic vs inorganic components</li>
+                            <li><strong>Cartilage Types:</strong> Hyaline, elastic, fibrocartilage</li>
+                            <li><strong>Bone Structure:</strong> Compact vs spongy bone</li>
+                            <li><strong>Developmental Aspects:</strong> Ossification processes</li>
+                            <li><strong>Clinical Correlations:</strong> Fractures, osteoporosis</li>
+                        </ol>
+                    </div>
+                    
+                    <h4>Important MCQ Patterns:</h4>
+                    <table>
+                        <tr>
+                            <th>Question Type</th>
+                            <th>Example</th>
+                            <th>Thinking Required</th>
+                            <th>Difficulty</th>
+                        </tr>
+                        <tr>
+                            <td>Direct Recall</td>
+                            <td>"Which cartilage type is found in intervertebral discs?"</td>
+                            <td>1-step thinking</td>
+                            <td>Easy</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>"Why does bone heal faster than cartilage?"</td>
+                            <td>2-step thinking</td>
+                            <td>Medium</td>
+                        </tr>
+                        <tr>
+                            <td>Analysis</td>
+                            <td>"Compare bone and cartilage repair mechanisms"</td>
+                            <td>3-step thinking</td>
+                            <td>Hard</td>
+                        </tr>
+                        <tr>
+                            <td>Clinical</td>
+                            <td>"Which bone feature would be affected in rickets?"</td>
+                            <td>4-step thinking</td>
+                            <td>Very Hard</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="important-point">
+                        <div class="important-point-title">High-Yield Concept</div>
+                        <p><strong>Bone Remodeling:</strong> Continuous process of bone resorption and formation. Osteoclasts break down bone, osteoblasts build new bone. This maintains calcium homeostasis and repairs micro-damage. Imbalances lead to osteoporosis (excessive resorption) or osteopetrosis (excessive formation).</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Analysis Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample 4-Step Thinking MCQ</div>
+                        <p><strong>Question:</strong> A patient with osteoporosis shows decreased bone density and increased fracture risk. Which cellular activity imbalance primarily contributes to this condition according to skeletal physiology principles?</p>
+                        <p><strong>Options:</strong></p>
+                        <ol type="A">
+                            <li>Increased osteoblast activity with normal osteoclast function</li>
+                            <li>Decreased osteoclast activity with enhanced osteoblast function</li>
+                            <li>Enhanced osteoclast activity surpassing osteoblast formation</li>
+                            <li>Equal but insufficient activity of both bone cell types</li>
+                        </ol>
+                        <p><strong>Step-by-step analysis:</strong></p>
+                        <ol>
+                            <li><strong>Step 1:</strong> Recall bone remodeling balance: osteoclasts (resorption) vs osteoblasts (formation)</li>
+                            <li><strong>Step 2:</strong> Osteoporosis = bone loss → more resorption than formation</li>
+                            <li><strong>Step 3:</strong> Identify cellular mechanism: osteoclast activity > osteoblast activity</li>
+                            <li><strong>Step 4:</strong> Apply to options: Option C describes this imbalance</li>
+                            <li><strong>Answer:</strong> C (Enhanced osteoclast activity surpassing osteoblast formation)</li>
+                        </ol>
+                        <div class="option-analysis">
+                            <h5>Option Analysis:</h5>
+                            <p><strong>A:</strong> Incorrect - Increased osteoblasts would build bone, not cause osteoporosis</p>
+                            <p><strong>B:</strong> Incorrect - Decreased osteoclasts would reduce bone loss</p>
+                            <p><strong>C:</strong> ✓ CORRECT - Matches pathophysiology of osteoporosis</p>
+                            <p><strong>D:</strong> Incorrect - Equal activity maintains balance, doesn't cause net loss</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Key Concepts for Skeletal System (10/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is bone considered a dynamic living tissue rather than an inert structure?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Bone undergoes continuous remodeling through osteoclast resorption and osteoblast formation. It responds to mechanical stress (Wolff's law), participates in calcium homeostasis, and can repair itself after fractures. This dynamic nature allows adaptation to changing physiological demands.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the functional significance of the Haversian system in compact bone?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Haversian systems (osteons) provide structural organization that combines strength with nutrient supply. The central canal contains blood vessels for nourishment, while concentric lamellae provide mechanical strength. Canaliculi allow communication between osteocytes for coordinated response to stress.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How does cartilage differ from bone in terms of healing capacity and why?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Cartilage heals poorly due to its avascular nature - chondrocytes rely on diffusion for nutrients. Bone heals well due to rich blood supply and osteogenic cells in periosteum. This difference is crucial in clinical management of joint injuries versus bone fractures.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Skeletal System MCQs Progress</div>
+                    <div class="progress-stats"><span id="skeleton-completed">0</span>/12 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="skeleton-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-bone"></i> Skeletal System MCQs (12)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-skeleton">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="skeleton-mcqs-container">
+                    <!-- Skeletal MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Joints Tab -->
+        <div class="tab-content" id="joints-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <div class="explanation-title">Joints: Classification, Movement & Clinical Disorders</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Key Concepts Tested in MCQs:</h4>
+                    <div class="mcat-tip">
+                        <div class="mcat-tip-title">NUMS Focus Areas</div>
+                        <ol>
+                            <li><strong>Joint Classification:</strong> Structural vs functional</li>
+                            <li><strong>Synovial Joints:</strong> Components and types</li>
+                            <li><strong>Range of Motion:</strong> Factors affecting mobility</li>
+                            <li><strong>Common Disorders:</strong> Arthritis, dislocation</li>
+                            <li><strong>Biomechanics:</strong> Lever systems in joints</li>
+                        </ol>
+                    </div>
+                    
+                    <h4>Joint Types Comparison:</h4>
+                    <table>
+                        <tr>
+                            <th>Joint Type</th>
+                            <th>Structural Basis</th>
+                            <th>Movement</th>
+                            <th>Examples</th>
+                            <th>Clinical Note</th>
+                        </tr>
+                        <tr>
+                            <td>Fibrous</td>
+                            <td>Dense connective tissue</td>
+                            <td>Immovable</td>
+                            <td>Skull sutures</td>
+                            <td>Fused in adults</td>
+                        </tr>
+                        <tr>
+                            <td>Cartilaginous</td>
+                            <td>Cartilage connection</td>
+                            <td>Slightly movable</td>
+                            <td>Intervertebral discs</td>
+                            <td>Herniation risk</td>
+                        </tr>
+                        <tr>
+                            <td>Synovial</td>
+                            <td>Fluid-filled cavity</td>
+                            <td>Freely movable</td>
+                            <td>Knee, shoulder</td>
+                            <td>Arthritis common</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="important-point">
+                        <div class="important-point-title">High-Yield Concept</div>
+                        <p><strong>Synovial Fluid Functions:</strong> 1) Lubrication reduces friction, 2) Nutrient supply to avascular cartilage, 3) Shock absorption during impact, 4) Waste removal from joint cavity. Synovial membrane produces this fluid, and its composition changes in arthritis.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Analysis Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample Clinical Application MCQ</div>
+                        <p><strong>Question:</strong> A rugby player suffers a shoulder injury where the humeral head dislocates anteriorly from the glenoid cavity. Based on joint classification and anatomical considerations, which factor primarily contributes to the shoulder's susceptibility to such dislocations compared to the hip joint?</p>
+                        <p><strong>Options:</strong></p>
+                        <ol type="A">
+                            <li>Shoulder has more ligaments providing excessive mobility at expense of stability</li>
+                            <li>Glenoid cavity is shallow while acetabulum is deep, providing less bony stability</li>
+                            <li>Shoulder muscles are weaker than hip muscles allowing easier dislocation</li>
+                            <li>Shoulder joint capsule is thinner and more easily torn during trauma</li>
+                        </ol>
+                        <p><strong>Step-by-step analysis:</strong></p>
+                        <ol>
+                            <li><strong>Step 1:</strong> Recall shoulder vs hip anatomy: both are ball-and-socket joints</li>
+                            <li><strong>Step 2:</strong> Shoulder designed for mobility (shallow glenoid), hip for stability (deep acetabulum)</li>
+                            <li><strong>Step 3:</strong> Dislocation susceptibility relates to bony architecture stability</li>
+                            <li><strong>Step 4:</strong> Shallow socket allows more movement but less stability</li>
+                            <li><strong>Answer:</strong> B (Glenoid cavity is shallow while acetabulum is deep)</li>
+                        </ol>
+                        <div class="option-analysis">
+                            <h5>Option Analysis:</h5>
+                            <p><strong>A:</strong> Incorrect - Shoulder actually has fewer ligaments than hip</p>
+                            <p><strong>B:</strong> ✓ CORRECT - Primary anatomical difference affecting stability</p>
+                            <p><strong>C:</strong> Incorrect - Shoulder muscles (rotator cuff) are strong but arrangement different</p>
+                            <p><strong>D:</strong> Incorrect - Capsule thickness not primary factor; both have strong capsules</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Key Concepts for Joints (18/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why are hinge joints like elbow more stable than ball-and-socket joints like shoulder?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Hinge joints have strong collateral ligaments limiting side-to-side movement and bony interlocking that restricts motion to one plane. Ball-and-socket joints sacrifice stability for greater range of motion - shallow socket allows multi-axial movement but provides less bony stability, relying more on muscles and ligaments.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the functional advantage of having cartilaginous joints between vertebrae?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Intervertebral discs (cartilaginous joints) provide shock absorption during walking/jumping, allow slight movement for spinal flexibility, and maintain spaces for spinal nerves to exit. Their fibrocartilage composition withstands compression while allowing limited movement.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How does rheumatoid arthritis differ from osteoarthritis in pathophysiology?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Rheumatoid arthritis is autoimmune - synovial membrane inflammation leads to joint destruction. Osteoarthritis is degenerative - articular cartilage wear from mechanical stress. RA affects multiple joints symmetrically, while OA typically affects weight-bearing joints asymmetrically.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Joints MCQs Progress</div>
+                    <div class="progress-stats"><span id="joints-completed">0</span>/10 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="joints-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-link"></i> Joints MCQs (10)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-joints">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="joints-mcqs-container">
+                    <!-- Joints MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Muscular System Tab -->
+        <div class="tab-content" id="muscles-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="explanation-title">Muscular System: Types, Contraction & Clinical Physiology</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Key Concepts Tested in MCQs:</h4>
+                    <div class="mcat-tip">
+                        <div class="mcat-tip-title">AKU/Competition Focus</div>
+                        <ol>
+                            <li><strong>Muscle Types:</strong> Skeletal, cardiac, smooth differences</li>
+                            <li><strong>Contraction Mechanism:</strong> Sliding filament theory</li>
+                            <li><strong>Neuromuscular Junction:</strong> Signal transmission</li>
+                            <li><strong>Energy Metabolism:</strong> ATP sources in muscle</li>
+                            <li><strong>Clinical Disorders:</strong> Myasthenia, muscular dystrophy</li>
+                        </ol>
+                    </div>
+                    
+                    <h4>Muscle Type Comparison:</h4>
+                    <table>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Skeletal Muscle</th>
+                            <th>Cardiac Muscle</th>
+                            <th>Smooth Muscle</th>
+                        </tr>
+                        <tr>
+                            <td>Control</td>
+                            <td>Voluntary</td>
+                            <td>Involuntary</td>
+                            <td>Involuntary</td>
+                        </tr>
+                        <tr>
+                            <td>Striations</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Nuclei</td>
+                            <td>Multinucleated</td>
+                            <td>Single</td>
+                            <td>Single</td>
+                        </tr>
+                        <tr>
+                            <td>Fatigue</td>
+                            <td>Yes (fast)</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Special</td>
+                            <td>Motor units</td>
+                            <td>Intercalated discs</td>
+                            <td>Gap junctions</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="important-point">
+                        <div class="important-point-title">High-Yield Concept</div>
+                        <p><strong>Sliding Filament Mechanism:</strong> Myosin heads bind to actin, undergo power stroke pulling actin filaments toward center of sarcomere. ATP required for: 1) Detaching myosin from actin, 2) Re-energizing myosin head. Calcium binding to troponin moves tropomyosin, exposing myosin binding sites on actin.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Analysis Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample Mechanism-Based MCQ</div>
+                        <p><strong>Question:</strong> During intense exercise, muscle fatigue occurs due to multiple physiological factors. According to muscle contraction biochemistry and energy metabolism, which mechanism primarily explains the immediate cause of fatigue during maximal voluntary contraction?</p>
+                        <strong>Options:</strong></p>
+                        <ol type="A">
+                            <li>Depletion of glycogen stores in muscle fibers reducing glucose availability</li>
+                            <li>Accumulation of lactic acid lowering pH and inhibiting enzyme function</li>
+                            <li>Insufficient ATP regeneration rate to meet cross-bridge cycling demands</li>
+                            <li>Calcium ion depletion in sarcoplasmic reticulum preventing excitation-contraction coupling</li>
+                        </ol>
+                        <p><strong>Step-by-step analysis:</strong></p>
+                        <ol>
+                            <li><strong>Step 1:</strong> Recall fatigue mechanisms: immediate vs prolonged</li>
+                            <li><strong>Step 2:</strong> Immediate fatigue (seconds-minutes) relates to energy systems</li>
+                            <li><strong>Step 3:</strong> Cross-bridge cycling requires ATP for detachment/energization</li>
+                            <li><strong>Step 4:</strong> During maximal effort, ATP demand exceeds regeneration capacity</li>
+                            <li><strong>Answer:</strong> C (Insufficient ATP regeneration rate)</li>
+                        </ol>
+                        <div class="option-analysis">
+                            <h5>Option Analysis:</h5>
+                            <p><strong>A:</strong> Incorrect - Glycogen depletion occurs in prolonged exercise (hours)</p>
+                            <p><strong>B:</strong> Incorrect - Lactic acid contributes but not primary immediate cause</p>
+                            <p><strong>C:</strong> ✓ CORRECT - ATP deficit directly affects cross-bridge cycling</p>
+                            <p><strong>D:</strong> Incorrect - Calcium depletion not typical in brief maximal effort</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Key Concepts for Muscular System (25/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How does the motor unit concept explain fine versus gross muscle control?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Small motor units (few muscle fibers per neuron) allow precise control (fingers, eyes). Large motor units (many fibers per neuron) provide powerful but less precise movements (thigh, back). Nervous system recruits more motor units for stronger contractions - this explains how we can lift both a pencil and a heavy weight with same muscles.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the role of troponin and tropomyosin in muscle contraction regulation?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Tropomyosin blocks myosin binding sites on actin at rest. Troponin has calcium-binding sites - when calcium binds, troponin changes shape, moving tropomyosin away from binding sites. This allows myosin heads to attach to actin, initiating contraction. Without calcium, tropomyosin remains in blocking position.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why do skeletal muscles appear striated under microscope while smooth muscles don't?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Striations come from organized sarcomeres with alternating A-bands (dark) and I-bands (light). Skeletal and cardiac muscles have highly organized actin/myosin arrangement. Smooth muscles lack sarcomeres - their contractile proteins are arranged in crisscross pattern, giving non-striated appearance.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Muscular System MCQs Progress</div>
+                    <div class="progress-stats"><span id="muscles-completed">0</span>/18 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="muscles-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-dumbbell"></i> Muscular System MCQs (18)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-muscles">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="muscles-mcqs-container">
+                    <!-- Muscular MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Tracking Tab -->
+        <div class="tab-content" id="progress-tab">
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-chart-line"></i> Progress Tracking</h3>
+                </div>
+                
+                <div class="explanation-section">
+                    <div class="explanation-header">
+                        <div class="explanation-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="explanation-title">Your Learning Progress - 40 MCQs</div>
+                    </div>
+                    
+                    <div class="explanation-content">
+                        <p>Track your progress through 40 high-yield MCQs on Support & Movement:</p>
+                        
+                        <div class="progress-section" style="margin-top: 12.15px;">
+                            <div class="progress-header">
+                                <div class="progress-title">Overall Progress</div>
+                                <div class="progress-stats"><span id="overall-completed">0</span>/40 completed</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="overall-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 12.15px;">
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Skeletal System (12 MCQs)</div>
+                                    <div class="progress-stats"><span id="skeleton-summary">0</span>/12</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="skeleton-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Joints (10 MCQs)</div>
+                                    <div class="progress-stats"><span id="joints-summary">0</span>/10</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="joints-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Muscular System (18 MCQs)</div>
+                                    <div class="progress-stats"><span id="muscles-summary">0</span>/18</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="muscles-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 12.15px; text-align: center;">
+                            <button class="btn btn-primary" id="reset-progress">
+                                <i class="fas fa-redo"></i> Reset Progress
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Support & Movement MCQs Portal. MDCAT | NUMS | HEC | Competition Exam Preparation.</p>
+                <p>Complete coverage with 40 high-yield MCQs and detailed conceptual explanations</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 40 Support & Movement MCQs
+        const supportMovementMCQs = [
+            // Skeletal System MCQs (12)
+            {
+                id: 1,
+                topic: 'skeleton',
+                question: "Which statement correctly describes the evolutionary advantage of developing an internal bony skeleton in terrestrial vertebrates?",
+                options: [
+                    "It allowed for greater body size by providing structural support against gravitational forces without buoyancy assistance",
+                    "It enabled more efficient gas exchange through increased surface area for respiratory processes",
+                    "It facilitated faster locomotion by reducing body weight through hollow bone structures",
+                    "It improved thermal regulation by providing insulation against environmental temperature fluctuations"
+                ],
+                correctAnswer: 0,
+                explanation: "The internal bony skeleton provides crucial structural support against gravity, which became particularly important when organisms transitioned from aquatic to terrestrial environments. Water provides buoyancy that counteracts gravitational forces, but on land, organisms require robust internal support to maintain body structure and allow movement against full gravitational pull. This evolutionary adaptation enabled larger body sizes and more complex movements on land.",
+                optionAnalysis: [
+                    "✓ CORRECT: Directly addresses the primary evolutionary advantage - structural support against gravity without water buoyancy",
+                    "✗ INCORRECT: While some bones are involved in respiration, this is not the primary evolutionary advantage of the skeletal system",
+                    "✗ INCORRECT: Hollow bones reduce weight but this is a specific adaptation in birds, not the fundamental advantage",
+                    "✗ INCORRECT: Thermal regulation is not a primary function of the skeletal system"
+                ]
+            },
+            {
+                id: 2,
+                topic: 'skeleton',
+                question: "A patient with osteoporosis shows significantly reduced bone mineral density. Which cellular activity imbalance best explains the pathophysiology of this condition?",
+                options: [
+                    "Excessive osteoblast activity with inadequate osteoclast function leading to abnormal bone thickening",
+                    "Enhanced osteoclast resorption surpassing osteoblast bone formation resulting in net bone loss",
+                    "Equal reduction in both osteoblast and osteoclast activities causing generalized bone weakness",
+                    "Defective chondrocyte proliferation in growth plates impairing normal bone development"
+                ],
+                correctAnswer: 1,
+                explanation: "Osteoporosis results from an imbalance in bone remodeling where osteoclast-mediated bone resorption exceeds osteoblast-mediated bone formation. This leads to decreased bone mass and increased fracture risk. Normal bone remodeling maintains balance between these two processes, but in osteoporosis, the rate of resorption outpaces formation.",
+                optionAnalysis: [
+                    "✗ INCORRECT: Excessive osteoblast activity would increase bone density, not decrease it",
+                    "✓ CORRECT: Osteoclast overactivity relative to osteoblast activity causes net bone loss",
+                    "✗ INCORRECT: Equal reduction would maintain balance, not cause significant bone loss",
+                    "✗ INCORRECT: Growth plate issues affect longitudinal growth, not adult bone density"
+                ]
+            },
+            {
+                id: 3,
+                topic: 'skeleton',
+                question: "What is the primary reason cartilage heals much more slowly than bone following injury?",
+                options: [
+                    "Cartilage cells have limited mitotic capacity and cannot divide to replace damaged tissue",
+                    "Cartilage lacks direct blood supply, relying on diffusion for nutrient delivery and waste removal",
+                    "Cartilage matrix contains inhibitory factors that prevent cellular proliferation and migration",
+                    "Cartilage has fewer stem cells capable of differentiating into functional chondrocytes"
+                ],
+                correctAnswer: 1,
+                explanation: "Cartilage is avascular tissue - it lacks blood vessels. Chondrocytes receive nutrients and eliminate wastes through diffusion from surrounding tissues. This limited nutrient supply and waste removal capacity severely restricts healing potential. In contrast, bone has rich blood supply through Haversian canals, allowing rapid delivery of nutrients and immune cells for repair.",
+                optionAnalysis: [
+                    "✗ INCORRECT: While chondrocytes have limited division capacity, the primary limitation is vascular",
+                    "✓ CORRECT: Avascular nature is the fundamental reason for poor healing",
+                    "✗ INCORRECT: Matrix inhibitors exist but are not the primary healing limitation",
+                    "✗ INCORRECT: Stem cell availability is not the main limiting factor"
+                ]
+            },
+            {
+                id: 4,
+                topic: 'skeleton',
+                question: "Which characteristic combination makes bone uniquely suited for its dual functions of structural support and mineral homeostasis?",
+                options: [
+                    "Rigid inorganic matrix for strength combined with living cells capable of active remodeling",
+                    "Flexible collagen fibers for shock absorption with calcified regions for weight bearing",
+                    "Hollow cylindrical structure for weight reduction with solid ends for articulation",
+                    "External compact bone for protection with internal spongy bone for blood cell production"
+                ],
+                correctAnswer: 0,
+                explanation: "Bone's unique combination of a rigid, mineralized inorganic matrix (primarily hydroxyapatite) provides mechanical strength for support, while living osteocytes, osteoblasts, and osteoclasts allow dynamic remodeling. This enables bone to respond to mechanical stress (Wolff's law) and participate in calcium/phosphate homeostasis through controlled mineral deposition and resorption.",
+                optionAnalysis: [
+                    "✓ CORRECT: Perfectly describes the dual structural and metabolic functions",
+                    "✗ INCORRECT: Describes shock absorption but not mineral homeostasis function",
+                    "✗ INCORRECT: Describes weight distribution but not metabolic function",
+                    "✗ INCORRECT: Describes different bone types but not the fundamental material properties"
+                ]
+            },
+            {
+                id: 5,
+                topic: 'skeleton',
+                question: "How does the Haversian system organization in compact bone contribute to both mechanical strength and cellular viability?",
+                options: [
+                    "Concentric lamellae provide rotational strength while central canals allow nutrient diffusion to osteocytes",
+                    "Parallel collagen orientation resists bending forces while lacunae house metabolically inactive cells",
+                    "Interconnected trabeculae distribute stress while marrow spaces support hematopoiesis",
+                    "Mineralized matrix resists compression while organic components prevent brittle fractures"
+                ],
+                correctAnswer: 0,
+                explanation: "Haversian systems (osteons) consist of concentric layers of bone matrix (lamellae) around a central canal containing blood vessels. The circular arrangement provides multidirectional strength, while the central vascular supply ensures osteocytes in surrounding lacunae receive nutrients via canaliculi. This design optimizes both structural integrity and cellular metabolism.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurately describes both mechanical and metabolic aspects",
+                    "✗ INCORRECT: Osteocytes are metabolically active, not inactive",
+                    "✗ INCORRECT: Describes spongy bone, not compact bone organization",
+                    "✗ INCORRECT: Describes bone composition, not Haversian system organization"
+                ]
+            },
+            {
+                id: 6,
+                topic: 'skeleton',
+                question: "A growing child presents with bowed legs and bone deformities. Which aspect of bone physiology is most likely impaired?",
+                options: [
+                    "Mineralization of osteoid matrix due to calcium/phosphate deficiency or vitamin D issues",
+                    "Collagen synthesis by osteoblasts affecting organic matrix formation",
+                    "Osteoclast resorption activity preventing normal bone remodeling",
+                    "Chondrocyte proliferation in epiphyseal plates affecting longitudinal growth"
+                ],
+                correctAnswer: 0,
+                explanation: "Bowed legs (rickets in children, osteomalacia in adults) typically result from impaired bone mineralization. This can be due to calcium deficiency, phosphate deficiency, or vitamin D deficiency (which regulates calcium absorption). The organic matrix (osteoid) forms normally but fails to mineralize properly, leading to soft, deformable bones.",
+                optionAnalysis: [
+                    "✓ CORRECT: Rickets/osteomalacia involve mineralization defects",
+                    "✗ INCORRECT: Collagen synthesis issues would affect matrix formation itself",
+                    "✗ INCORRECT: Osteoclast issues would affect remodeling, not primarily cause bowing",
+                    "✗ INCORRECT: Growth plate issues affect length, not primarily cause bowing deformities"
+                ]
+            },
+            {
+                id: 7,
+                topic: 'skeleton',
+                question: "What is the functional significance of having both compact and spongy bone in the skeletal system?",
+                options: [
+                    "Compact bone provides strength for weight bearing while spongy bone reduces weight and houses marrow",
+                    "Spongy bone allows flexibility at joints while compact bone provides rigid support in shafts",
+                    "Compact bone facilitates rapid growth while spongy bone provides structural reinforcement",
+                    "Spongy bone stores minerals while compact bone produces blood cells continuously"
+                ],
+                correctAnswer: 0,
+                explanation: "Compact (cortical) bone forms the dense outer layer of bones, providing strength and rigidity for weight-bearing and protection. Spongy (cancellous) bone has a lattice-like structure that reduces weight while maintaining strength, and its spaces contain bone marrow for hematopoiesis and fat storage. This combination optimizes strength-to-weight ratio.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurately describes the complementary functions",
+                    "✗ INCORRECT: Spongy bone is not primarily for flexibility",
+                    "✗ INCORRECT: Compact bone doesn't facilitate rapid growth",
+                    "✗ INCORRECT: Functions reversed - compact doesn't produce blood cells"
+                ]
+            },
+            {
+                id: 8,
+                topic: 'skeleton',
+                question: "Why are fractures through the epiphyseal plate in children particularly concerning compared to other bone fractures?",
+                options: [
+                    "They can disrupt longitudinal bone growth leading to limb length discrepancies or angular deformities",
+                    "They compromise joint stability permanently due to damage to articular cartilage surfaces",
+                    "They prevent proper bone remodeling throughout life by damaging osteogenic stem cells",
+                    "They increase infection risk significantly due to exposure of bone marrow to environment"
+                ],
+                correctAnswer: 0,
+                explanation: "Epiphyseal (growth) plates contain cartilage where longitudinal bone growth occurs. Fractures through this area can damage the proliferative cartilage cells or create bony bridges across the plate, potentially arresting growth or causing asymmetric growth. This can lead to limb length discrepancies or angular deformities as the child grows.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurately describes the primary concern with growth plate fractures",
+                    "✗ INCORRECT: Epiphyseal plates are not articular cartilage",
+                    "✗ INCORRECT: Growth plate damage doesn't prevent all future remodeling",
+                    "✗ INCORRECT: Infection risk is not the primary concern"
+                ]
+            },
+            {
+                id: 9,
+                topic: 'skeleton',
+                question: "How does Wolff's law explain bone's adaptive response to mechanical stress?",
+                options: [
+                    "Bone remodels itself to become stronger in areas of high stress and weaker in areas of disuse",
+                    "Bone grows longer in response to tension forces and thicker in response to compression forces",
+                    "Bone develops trabecular patterns aligned with principal stress directions for optimal load distribution",
+                    "Bone increases mineral density proportionally to the frequency and intensity of loading cycles"
+                ],
+                correctAnswer: 0,
+                explanation: "Wolff's law states that bone adapts to the loads under which it is placed. Areas subjected to higher mechanical stress undergo increased bone formation, while areas with reduced stress experience bone resorption. This adaptive remodeling allows bones to optimize their structure for prevailing mechanical demands, maintaining strength where needed while avoiding unnecessary mass.",
+                optionAnalysis: [
+                    "✓ CORRECT: Direct statement of Wolff's law principle",
+                    "✗ INCORRECT: Describes specific responses but not the general law",
+                    "✗ INCORRECT: Describes trabecular alignment, a specific manifestation",
+                    "✗ INCORRECT: Describes one aspect but not the complete adaptive principle"
+                ]
+            },
+            {
+                id: 10,
+                topic: 'skeleton',
+                question: "What is the primary difference between intramembranous and endochondral ossification processes?",
+                options: [
+                    "Intramembranous forms bone directly from mesenchymal tissue while endochondral uses cartilage template",
+                    "Endochondral occurs in flat bones while intramembranous occurs in long bones",
+                    "Intramembranous produces spongy bone only while endochondral produces both bone types",
+                    "Endochondral requires vascular invasion while intramembranous occurs without blood supply"
+                ],
+                correctAnswer: 0,
+                explanation: "Intramembranous ossification forms bone directly from mesenchymal connective tissue (e.g., skull bones, clavicle). Endochondral ossification first forms a cartilage model that is later replaced by bone (e.g., long bones, vertebrae). Both processes eventually produce mature bone with similar structure, but their developmental pathways differ significantly.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurately distinguishes the two processes",
+                    "✗ INCORRECT: Reversed - intramembranous for flat bones, endochondral for long bones",
+                    "✗ INCORRECT: Both processes can produce both bone types",
+                    "✗ INCORRECT: Both processes require vascularization"
+                ]
+            },
+            {
+                id: 11,
+                topic: 'skeleton',
+                question: "Why does aging typically lead to decreased bone density and increased fracture risk?",
+                options: [
+                    "Hormonal changes (especially estrogen decline) shift bone remodeling balance toward resorption",
+                    "Reduced physical activity decreases mechanical stimulation needed to maintain bone mass",
+                    "Impaired intestinal calcium absorption combined with reduced renal vitamin D activation",
+                    "All of the above factors contribute synergistically to age-related bone loss"
+                ],
+                correctAnswer: 3,
+                explanation: "Age-related bone loss (osteopenia/osteoporosis) results from multiple interacting factors: 1) Hormonal changes (estrogen/testosterone decline) increase osteoclast activity, 2) Reduced physical activity decreases mechanical stimulation for bone maintenance, 3) Impaired calcium/vitamin D metabolism reduces mineral availability. These factors combine to accelerate bone loss with aging.",
+                optionAnalysis: [
+                    "✗ INCORRECT: Partially correct but incomplete",
+                    "✗ INCORRECT: Partially correct but incomplete",
+                    "✗ INCORRECT: Partially correct but incomplete",
+                    "✓ CORRECT: All listed factors contribute to age-related bone loss"
+                ]
+            },
+            {
+                id: 12,
+                topic: 'skeleton',
+                question: "What functional advantage does the periosteum provide to bone physiology?",
+                options: [
+                    "It contains osteogenic cells for bone growth/repair and nerve endings for pain perception",
+                    "It produces synovial fluid for joint lubrication and nutrient supply to articular cartilage",
+                    "It stores calcium ions for rapid release during muscle contraction needs",
+                    "It filters blood entering bone tissue and regulates mineral homeostasis"
+                ],
+                correctAnswer: 0,
+                explanation: "The periosteum is a dense connective tissue membrane covering bone surfaces (except at joints). It contains osteogenic cells that can differentiate into osteoblasts for bone growth (appositional) and repair. It also has nerve endings that make bone pain-sensitive when injured or inflamed. Additionally, it provides attachment points for tendons and ligaments.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurately describes periosteal functions",
+                    "✗ INCORRECT: Synovial membrane produces synovial fluid, not periosteum",
+                    "✗ INCORRECT: Bone matrix stores calcium, not periosteum",
+                    "✗ INCORRECT: Periosteum doesn't filter blood or regulate minerals directly"
+                ]
+            },
+            
+            // Joints MCQs (10)
+            {
+                id: 13,
+                topic: 'joints',
+                question: "Why is the shoulder joint more prone to dislocation than the hip joint despite both being ball-and-socket type?",
+                options: [
+                    "The glenoid cavity is shallow compared to the deep acetabulum, providing less bony stability",
+                    "Shoulder ligaments are more elastic and stretchable to allow greater range of motion",
+                    "Rotator cuff muscles are weaker than hip muscles and provide less dynamic stabilization",
+                    "The shoulder joint capsule is thinner and more easily torn during traumatic forces"
+                ],
+                correctAnswer: 0,
+                explanation: "The primary reason for the shoulder's greater dislocation susceptibility is anatomical: the glenoid cavity (shoulder socket) is relatively shallow, while the acetabulum (hip socket) is deep and encloses most of the femoral head. This shallow socket allows greater range of motion but provides less inherent stability, making the shoulder rely more on muscular and ligamentous support.",
+                optionAnalysis: [
+                    "✓ CORRECT: Primary anatomical difference affecting stability",
+                    "✗ INCORRECT: Shoulder ligaments are actually fewer and less robust",
+                    "✗ INCORRECT: Rotator cuff muscles are strong but arrangement different",
+                    "✗ INCORRECT: Capsule thickness is not the primary factor"
+                ]
+            },
+            {
+                id: 14,
+                topic: 'joints',
+                question: "What is the primary function of synovial fluid in diarthrodial joints?",
+                options: [
+                    "Lubrication to reduce friction, nutrient supply to avascular cartilage, and shock absorption",
+                    "Structural reinforcement of joint capsule and ligament attachment to bone surfaces",
+                    "Production of cartilage matrix components and maintenance of joint space volume",
+                    "Immune surveillance and removal of debris from normal wear and tear processes"
+                ],
+                correctAnswer: 0,
+                explanation: "Synovial fluid has three primary functions: 1) Lubrication reduces friction between articular surfaces during movement, 2) Nutrient supply to avascular articular cartilage via diffusion, 3) Shock absorption distributes loads across joint surfaces. It's produced by the synovial membrane and its viscosity changes with joint activity.",
+                optionAnalysis: [
+                    "✓ CORRECT: Comprehensive description of synovial fluid functions",
+                    "✗ INCORRECT: Structural support comes from ligaments/capsule, not fluid",
+                    "✗ INCORRECT: Cartilage produces its own matrix, not from synovial fluid",
+                    "✗ INCORRECT: While it has some immune functions, these are not primary"
+                ]
+            },
+            {
+                id: 15,
+                topic: 'joints',
+                question: "How does rheumatoid arthritis differ pathophysiologically from osteoarthritis?",
+                options: [
+                    "Rheumatoid is autoimmune inflammation of synovium while osteoarthritis is degenerative cartilage wear",
+                    "Osteoarthritis involves immune complex deposition while rheumatoid involves mechanical wear",
+                    "Rheumatoid affects mainly weight-bearing joints while osteoarthritis affects small joints symmetrically",
+                    "Osteoarthritis shows morning stiffness improving with activity while rheumatoid shows constant pain"
+                ],
+                correctAnswer: 0,
+                explanation: "Rheumatoid arthritis is an autoimmune disorder where the immune system attacks the synovial membrane, causing inflammation, pannus formation, and eventual joint destruction. Osteoarthritis is a degenerative condition primarily involving articular cartilage wear from mechanical stress, with secondary bone changes (osteophytes). RA typically affects multiple joints symmetrically, while OA often affects weight-bearing joints asymmetrically.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurate distinction between autoimmune vs degenerative",
+                    "✗ INCORRECT: Descriptions reversed for the two conditions",
+                    "✗ INCORRECT: Descriptions reversed for joint distribution",
+                    "✗ INCORRECT: Both can have morning stiffness patterns"
+                ]
+            },
+            {
+                id: 16,
+                topic: 'joints',
+                question: "What structural feature allows hinge joints like the elbow to be particularly stable in their plane of motion?",
+                options: [
+                    "Strong collateral ligaments prevent side-to-side movement while allowing flexion-extension",
+                    "Deep bony interlocking of articular surfaces restricts all but essential movements",
+                    "Thick joint capsule with multiple reinforcing bands resists dislocation forces",
+                    "Muscle tendons crossing the joint provide dynamic stabilization during movement"
+                ],
+                correctAnswer: 0,
+                explanation: "Hinge joints achieve stability through strong collateral ligaments on each side of the joint. These ligaments prevent movement outside the desired plane (side-to-side or rotational movements) while allowing free movement in the intended plane (flexion-extension). The elbow has medial (ulnar) and lateral (radial) collateral ligaments serving this function.",
+                optionAnalysis: [
+                    "✓ CORRECT: Primary stabilizing mechanism of hinge joints",
+                    "✗ INCORRECT: Hinge joints don't have deep bony interlocking",
+                    "✗ INCORRECT: Capsule provides some support but ligaments are primary",
+                    "✗ INCORRECT: Muscles provide dynamic but not primary structural stability"
+                ]
+            },
+            {
+                id: 17,
+                topic: 'joints',
+                question: "Why are intervertebral discs classified as cartilaginous joints rather than synovial joints?",
+                options: [
+                    "They consist of fibrocartilage connecting vertebral bodies without a joint cavity",
+                    "They allow only slight movement compared to the free movement of synovial joints",
+                    "They develop from different embryonic tissue than synovial joint structures",
+                    "They lack synovial membrane and fluid characteristic of diarthrodial joints"
+                ],
+                correctAnswer: 0,
+                explanation: "Intervertebral discs are symphyses - a type of cartilaginous joint where bones are connected by fibrocartilage. They lack a joint cavity (synovial space) and allow only limited movement. The disc has a central gelatinous nucleus pulposus surrounded by concentric layers of fibrocartilage (annulus fibrosus), providing both connection and shock absorption.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurate structural classification criteria",
+                    "✗ INCORRECT: Movement range is a functional, not structural, classification",
+                    "✗ INCORRECT: Embryonic origin is not the primary classification basis",
+                    "✗ INCORRECT: While true, this is a consequence of the structural difference"
+                ]
+            },
+            {
+                id: 18,
+                topic: 'joints',
+                question: "What is the functional advantage of having menisci in certain synovial joints like the knee?",
+                options: [
+                    "They improve joint congruence, distribute loads, absorb shock, and provide stability",
+                    "They produce additional synovial fluid to enhance lubrication during high-load activities",
+                    "They serve as attachment points for ligaments and tendons crossing the joint",
+                    "They contain nerve endings for proprioceptive feedback about joint position"
+                ],
+                correctAnswer: 0,
+                explanation: "Menisci (fibrocartilage discs) improve joint function in several ways: 1) Improve congruence between mismatched articular surfaces, 2) Distribute loads over larger areas reducing pressure, 3) Absorb shock during impact, 4) Enhance stability by deepening sockets, 5) Aid in lubrication. In the knee, medial and lateral menisci are crucial for normal function.",
+                optionAnalysis: [
+                    "✓ CORRECT: Comprehensive description of meniscal functions",
+                    "✗ INCORRECT: Synovial membrane produces fluid, not menisci",
+                    "✗ INCORRECT: Some attachment occurs but not primary function",
+                    "✗ INCORRECT: Some proprioceptive function but not primary advantage"
+                ]
+            },
+            {
+                id: 19,
+                topic: 'joints',
+                question: "How does regular exercise benefit joint health and potentially delay osteoarthritis development?",
+                options: [
+                    "It stimulates synovial fluid production, maintains cartilage nutrition, and strengthens supporting muscles",
+                    "It increases bone density at joint margins providing better support for articular surfaces",
+                    "It promotes ligament thickening and joint capsule strengthening for enhanced stability",
+                    "It accelerates cartilage turnover removing damaged components before they accumulate"
+                ],
+                correctAnswer: 0,
+                explanation: "Regular, moderate exercise benefits joints through multiple mechanisms: 1) Stimulates synovial fluid production and circulation, improving cartilage nutrition, 2) Maintains joint range of motion, 3) Strengthens muscles that support and stabilize joints, 4) Helps maintain healthy weight reducing joint loading. However, excessive high-impact exercise can accelerate joint degeneration.",
+                optionAnalysis: [
+                    "✓ CORRECT: Comprehensive benefits of exercise on joint health",
+                    "✗ INCORRECT: Bone density changes are minor benefit",
+                    "✗ INCORRECT: Ligament changes are minimal with normal exercise",
+                    "✗ INCORRECT: Exercise doesn't accelerate cartilage turnover significantly"
+                ]
+            },
+            {
+                id: 20,
+                topic: 'joints',
+                question: "What is the primary reason skull sutures are classified as fibrous joints rather than synovial joints?",
+                options: [
+                    "Bones are connected by dense fibrous connective tissue without a joint cavity",
+                    "They allow no movement in adults serving only as growth sites during development",
+                    "They lack articular cartilage, synovial membrane, and lubricating fluid",
+                    "They develop from intramembranous ossification rather than endochondral processes"
+                ],
+                correctAnswer: 0,
+                explanation: "Skull sutures are synarthroses - immovable fibrous joints where bones are connected by thin layers of dense fibrous connective tissue (sutural ligaments). They lack a joint cavity, articular cartilage, and synovial membrane. While they allow slight movement in infants (for birth) and growth in childhood, they fuse in adulthood becoming completely immobile.",
+                optionAnalysis: [
+                    "✓ CORRECT: Structural basis for classification as fibrous joints",
+                    "✗ INCORRECT: Functional characteristic, not structural classification",
+                    "✗ INCORRECT: Absence of features doesn't define what they are, only what they're not",
+                    "✗ INCORRECT: Developmental origin not used for functional classification"
+                ]
+            },
+            {
+                id: 21,
+                topic: 'joints',
+                question: "What mechanical principle explains why lifting heavy objects with straight knees strains the back more than with bent knees?",
+                options: [
+                    "Straight knees increase the lever arm distance requiring greater back muscle force",
+                    "Bent knees allow weight distribution between legs and back reducing individual loads",
+                    "Straight knees lock the patella reducing quadriceps effectiveness in lifting",
+                    "Bent knees lower the center of gravity providing better balance during lifting"
+                ],
+                correctAnswer: 0,
+                explanation: "This demonstrates biomechanical lever principles. With straight knees, the weight is farther from the pivot point (lumbar spine), creating a longer lever arm. According to torque principles (Torque = Force × Distance), longer lever arms require greater muscular force to lift the same weight. Bent knees bring the weight closer to the body, shortening the lever arm and reducing required back muscle force.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurate application of lever mechanics",
+                    "✗ INCORRECT: Distribution occurs but not the primary mechanical reason",
+                    "✗ INCORRECT: Patellar locking is not the primary factor",
+                    "✗ INCORRECT: Balance is secondary to mechanical advantage"
+                ]
+            },
+            {
+                id: 22,
+                topic: 'joints',
+                question: "Why does immobilization of a joint lead to stiffness and reduced range of motion?",
+                options: [
+                    "Connective tissues shorten and adhesions form between synovial membrane layers",
+                    "Articular cartilage deteriorates from lack of compression-decompression cycles",
+                    "Synovial fluid becomes thicker and less effective at lubrication",
+                    "Muscles surrounding the joint undergo disuse atrophy and lose elasticity"
+                ],
+                correctAnswer: 0,
+                explanation: "Joint immobilization causes connective tissue changes: 1) Capsule and ligaments shorten due to collagen cross-linking, 2) Adhesions form between synovial membrane layers, 3) Fibrous tissue infiltrates joint spaces. These changes restrict movement. Additionally, cartilage nutrition suffers without joint movement pumping synovial fluid, and muscles atrophy, but tissue shortening is the primary cause of stiffness.",
+                optionAnalysis: [
+                    "✓ CORRECT: Primary mechanism of immobilization stiffness",
+                    "✗ INCORRECT: Cartilage changes occur but are slower",
+                    "✗ INCORRECT: Fluid viscosity changes are minor",
+                    "✗ INCORRECT: Muscle atrophy contributes but isn't primary for joint stiffness"
+                ]
+            },
+            
+            // Muscular System MCQs (18)
+            {
+                id: 23,
+                topic: 'muscles',
+                question: "What is the fundamental mechanism by which muscles convert chemical energy into mechanical work during contraction?",
+                options: [
+                    "ATP hydrolysis provides energy for myosin head movement along actin filaments",
+                    "Calcium binding to troponin initiates cross-bridge formation between filaments",
+                    "Action potentials depolarize T-tubules triggering calcium release from sarcoplasmic reticulum",
+                    "Creatine phosphate transfers phosphate to ADP regenerating ATP for immediate use"
+                ],
+                correctAnswer: 0,
+                explanation: "Muscle contraction fundamentally involves myosin heads hydrolyzing ATP to ADP + Pi, using the released energy to change conformation and pull actin filaments. This cross-bridge cycling (attach, pivot, detach, reset) converts chemical energy (ATP) into mechanical work (filament sliding). Other processes (calcium release, action potentials, ATP regeneration) support but don't directly perform this energy conversion.",
+                optionAnalysis: [
+                    "✓ CORRECT: Direct energy conversion mechanism",
+                    "✗ INCORRECT: Calcium initiates but doesn't provide energy",
+                    "✗ INCORRECT: Electrical events trigger but don't convert energy",
+                    "✗ INCORRECT: ATP regeneration supports but isn't the conversion mechanism"
+                ]
+            },
+            {
+                id: 24,
+                topic: 'muscles',
+                question: "How does the motor unit concept explain graded muscle contraction strength?",
+                options: [
+                    "Increasing numbers of motor units are recruited for stronger contractions",
+                    "Individual muscle fibers contract with varying force depending on stimulus frequency",
+                    "Different motor units contain fibers with varying contraction speeds and strengths",
+                    "Larger motor units with more fibers are recruited first for fine control tasks"
+                ],
+                correctAnswer: 0,
+                explanation: "A motor unit consists of one motor neuron and all muscle fibers it innervates. For graded contractions: 1) Recruitment: More motor units are activated for stronger contractions, 2) Frequency summation: Higher stimulation rates increase force through tetanic fusion. Size principle: Smaller units (fine control) recruit first, then larger units (power). Individual fibers follow all-or-none principle.",
+                optionAnalysis: [
+                    "✓ CORRECT: Primary mechanism of graded contraction",
+                    "✗ INCORRECT: Individual fibers are all-or-none, not graded",
+                    "✗ INCORRECT: Fiber type variation exists but not primary grading mechanism",
+                    "✗ INCORRECT: Smaller units recruit first, not larger"
+                ]
+            },
+            {
+                id: 25,
+                topic: 'muscles',
+                question: "What is the primary role of troponin and tropomyosin in regulating skeletal muscle contraction?",
+                options: [
+                    "Tropomyosin blocks myosin binding sites; troponin moves it when calcium binds",
+                    "Troponin provides structural support for thin filaments; tropomyosin regulates calcium uptake",
+                    "Tropomyosin hydrolyzes ATP for energy; troponin stores calcium ions for release",
+                    "Troponin anchors actin filaments to Z-discs; tropomyosin facilitates cross-bridge formation"
+                ],
+                correctAnswer: 0,
+                explanation: "In relaxed muscle, tropomyosin sits in the groove of the actin helix, physically blocking myosin binding sites. Troponin (with three subunits) binds to tropomyosin and actin. When calcium binds to troponin's calcium-binding subunit, troponin changes shape, moving tropomyosin away from myosin binding sites, allowing cross-bridge formation and contraction.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurate description of regulatory mechanism",
+                    "✗ INCORRECT: Functions reversed and inaccurate",
+                    "✗ INCORRECT: Neither protein hydrolyzes ATP or stores calcium",
+                    "✗ INCORRECT: Neither protein anchors filaments to Z-discs"
+                ]
+            },
+            {
+                id: 26,
+                topic: 'muscles',
+                question: "Why do skeletal muscles appear striated under light microscopy while smooth muscles do not?",
+                options: [
+                    "Skeletal muscles have organized sarcomeres with aligned actin/myosin creating banding pattern",
+                    "Smooth muscles lack sufficient contractile proteins to form visible striations",
+                    "Skeletal muscle nuclei are peripherally located allowing clear visualization of fibers",
+                    "Smooth muscles have dense connective tissue covering that obscures internal structure"
+                ],
+                correctAnswer: 0,
+                explanation: "Striations result from highly organized sarcomeres - repeating units of actin and myosin filaments that create alternating dark (A-bands: thick filaments + overlap) and light (I-bands: thin filaments only) bands. Skeletal and cardiac muscles have this regular arrangement. Smooth muscles lack sarcomeres; their contractile proteins are arranged in crisscross pattern, giving non-striated appearance.",
+                optionAnalysis: [
+                    "✓ CORRECT: Structural basis for striated appearance",
+                    "✗ INCORRECT: Smooth muscles have contractile proteins, just differently arranged",
+                    "✗ INCORRECT: Nuclear position doesn't cause striations",
+                    "✗ INCORRECT: Connective tissue doesn't obscure striations in other tissues"
+                ]
+            },
+            {
+                id: 27,
+                topic: 'muscles',
+                question: "What is the primary cause of muscle fatigue during sustained maximal voluntary contraction?",
+                options: [
+                    "Insufficient ATP regeneration rate to meet cross-bridge cycling demands",
+                    "Accumulation of lactic acid lowering intracellular pH inhibiting enzymes",
+                    "Depletion of acetylcholine at neuromuscular junctions impairing signal transmission",
+                    "Calcium ion depletion in sarcoplasmic reticulum preventing excitation-contraction"
+                ],
+                correctAnswer: 0,
+                explanation: "During maximal effort, ATP consumption exceeds regeneration capacity. Cross-bridge cycling requires ATP for: 1) Myosin detachment from actin, 2) Re-energizing myosin head. Without sufficient ATP, cross-bridges remain attached (rigor), preventing further contraction. Other factors contribute (pH changes, ion imbalances, metabolic byproducts), but ATP deficit is primary in immediate fatigue.",
+                optionAnalysis: [
+                    "✓ CORRECT: Primary immediate cause of fatigue",
+                    "✗ INCORRECT: pH changes contribute but aren't primary in brief maximal effort",
+                    "✗ INCORRECT: Neuromuscular transmission usually not limiting",
+                    "✗ INCORRECT: Calcium depletion occurs in prolonged, not brief, maximal effort"
+                ]
+            },
+            {
+                id: 28,
+                topic: 'muscles',
+                question: "How does cardiac muscle ensure synchronized contraction throughout the heart?",
+                options: [
+                    "Intercalated discs with gap junctions allow rapid electrical signal propagation between cells",
+                    "Pacemaker cells generate regular impulses that spread through conducting system",
+                    "All cardiac cells are electrically coupled and contract as a functional syncytium",
+                    "All of the above mechanisms work together for coordinated cardiac contraction"
+                ],
+                correctAnswer: 3,
+                explanation: "Cardiac muscle coordination involves: 1) Intercalated discs contain gap junctions allowing ion flow between cells, electrically coupling them, 2) Specialized conducting system (SA node, AV node, Bundle of His, Purkinje fibers) ensures orderly activation, 3) Functional syncytium behavior where cells contract nearly simultaneously. These features ensure efficient pumping action.",
+                optionAnalysis: [
+                    "✗ INCORRECT: Partially correct but incomplete",
+                    "✗ INCORRECT: Partially correct but incomplete",
+                    "✗ INCORRECT: Partially correct but incomplete",
+                    "✓ CORRECT: All listed mechanisms contribute to coordination"
+                ]
+            },
+            {
+                id: 29,
+                topic: 'muscles',
+                question: "What advantage does the T-tubule system provide in skeletal muscle excitation-contraction coupling?",
+                options: [
+                    "It transmits action potentials deep into muscle fiber ensuring synchronous calcium release",
+                    "It increases surface area for nutrient exchange supporting high metabolic rates",
+                    "It provides structural support maintaining cylindrical shape during contraction",
+                    "It stores calcium ions near contractile proteins for rapid availability"
+                ],
+                correctAnswer: 0,
+                explanation: "T-tubules (transverse tubules) are invaginations of sarcolemma that penetrate deep into muscle fibers. They conduct action potentials from the surface to interior, ensuring all myofibrils receive nearly simultaneous signals. This triggers calcium release from adjacent sarcoplasmic reticulum throughout the fiber, enabling synchronous contraction. Without T-tubules, interior regions would contract later than surface regions.",
+                optionAnalysis: [
+                    "✓ CORRECT: Primary function of T-tubule system",
+                    "✗ INCORRECT: Nutrient exchange is not primary function",
+                    "✗ INCORRECT: Structural support is minor function",
+                    "✗ INCORRECT: Sarcoplasmic reticulum stores calcium, not T-tubules"
+                ]
+            },
+            {
+                id: 30,
+                topic: 'muscles',
+                question: "What is the primary difference between isotonic and isometric muscle contractions?",
+                options: [
+                    "Isotonic changes muscle length against constant load; isometric generates force without length change",
+                    "Isometric occurs during movement; isotonic occurs during static positions",
+                    "Isotonic uses more ATP; isometric is more energy efficient for maintaining posture",
+                    "Isometric recruits more motor units; isotonic uses fewer units with higher frequency"
+                ],
+                correctAnswer: 0,
+                explanation: "Isotonic contractions change muscle length while maintaining constant tension (e.g., lifting weight). Concentric: muscle shortens; Eccentric: muscle lengthens under tension. Isometric contractions generate force without changing length (e.g., holding weight stationary). Most activities combine both types. Isometric requires continuous cross-bridge cycling without filament sliding.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurate distinction based on length change",
+                    "✗ INCORRECT: Descriptions reversed",
+                    "✗ INCORRECT: Energy efficiency varies by situation, not inherent",
+                    "✗ INCORRECT: Recruitment patterns vary, not defining characteristic"
+                ]
+            },
+            {
+                id: 31,
+                topic: 'muscles',
+                question: "Why are slow-twitch (Type I) muscle fibers more fatigue-resistant than fast-twitch (Type II) fibers?",
+                options: [
+                    "They have more mitochondria, myoglobin, and capillaries supporting aerobic metabolism",
+                    "They contain more glycogen stores for anaerobic ATP production during exertion",
+                    "They have larger diameter allowing greater force production per cross-sectional area",
+                    "They rely on creatine phosphate system for immediate energy without oxygen debt"
+                ],
+                correctAnswer: 0,
+                explanation: "Slow-twitch fibers are adapted for endurance: 1) Rich mitochondria for aerobic ATP production, 2) High myoglobin for oxygen storage, 3) Extensive capillary network for oxygen delivery, 4) Lower glycolytic enzyme levels. They contract slowly but resist fatigue. Fast-twitch fibers have opposite characteristics - adapted for power but fatigue quickly.",
+                optionAnalysis: [
+                    "✓ CORRECT: Key adaptations for fatigue resistance",
+                    "✗ INCORRECT: Fast-twitch have more glycogen for anaerobic metabolism",
+                    "✗ INCORRECT: Fast-twitch are generally larger diameter",
+                    "✗ INCORRECT: Creatine phosphate system is in both, more in fast-twitch"
+                ]
+            },
+            {
+                id: 32,
+                topic: 'muscles',
+                question: "What causes the relaxation phase of skeletal muscle contraction?",
+                options: [
+                    "Calcium reuptake into sarcoplasmic reticulum lowering cytoplasmic calcium concentration",
+                    "ATP depletion preventing further cross-bridge cycling despite calcium presence",
+                    "Troponin degradation terminating its regulatory function on tropomyosin",
+                    "Action potential cessation without affecting calcium distribution in cytoplasm"
+                ],
+                correctAnswer: 0,
+                explanation: "Relaxation occurs when: 1) Calcium is actively pumped back into sarcoplasmic reticulum via Ca²⁺-ATPase, 2) Cytoplasmic calcium falls below threshold for troponin binding, 3) Troponin returns to original shape, allowing tropomyosin to block myosin binding sites, 4) Cross-bridges detach (requires ATP). Without calcium reuptake, muscle would remain contracted.",
+                optionAnalysis: [
+                    "✓ CORRECT: Primary mechanism initiating relaxation",
+                    "✗ INCORRECT: ATP depletion causes rigor, not normal relaxation",
+                    "✗ INCORRECT: Troponin isn't degraded during normal cycles",
+                    "✗ INCORRECT: Action potential cessation alone doesn't lower calcium"
+                ]
+            },
+            {
+                id: 33,
+                topic: 'muscles',
+                question: "How does the length-tension relationship explain optimal muscle performance?",
+                options: [
+                    "Maximum force occurs at optimal sarcomere length with optimal actin-myosin overlap",
+                    "Longer muscles generate more force regardless of sarcomere arrangement",
+                    "Shorter muscles contract faster due to reduced distance for filament sliding",
+                    "Intermediate lengths allow maximum calcium release from sarcoplasmic reticulum"
+                ],
+                correctAnswer: 0,
+                explanation: "The length-tension relationship shows that force generation depends on sarcomere length: 1) Optimal length: Maximum cross-bridge formation possible, 2) Too short: Actin filaments overlap reducing binding sites, 3) Too long: Reduced overlap between actin and myosin. This explains why muscles generate maximum force at their resting length in body.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurate description of length-tension relationship",
+                    "✗ INCORRECT: Total muscle length doesn't determine force; sarcomere length does",
+                    "✗ INCORRECT: Contraction speed relates to fiber type, not length",
+                    "✗ INCORRECT: Calcium release not primarily length-dependent"
+                ]
+            },
+            {
+                id: 34,
+                topic: 'muscles',
+                question: "What is the role of creatine phosphate in muscle energy metabolism?",
+                options: [
+                    "It rapidly regenerates ATP from ADP during high-intensity activity lasting seconds",
+                    "It stores oxygen in muscle fibers for use during aerobic respiration",
+                    "It buffers lactic acid accumulation maintaining optimal pH for enzyme function",
+                    "It provides substrate for fatty acid oxidation during prolonged low-intensity exercise"
+                ],
+                correctAnswer: 0,
+                explanation: "Creatine phosphate (phosphocreatine) serves as a rapid ATP buffer: Creatine phosphate + ADP ↔ Creatine + ATP. This reaction is catalyzed by creatine kinase and provides immediate ATP regeneration for brief, high-intensity activities (first 5-10 seconds). Muscle stores are limited, so other systems (glycolysis, oxidative phosphorylation) take over for longer activities.",
+                optionAnalysis: [
+                    "✓ CORRECT: Primary function in energy metabolism",
+                    "✗ INCORRECT: Myoglobin stores oxygen, not creatine phosphate",
+                    "✗ INCORRECT: Bicarbonate and proteins buffer pH, not creatine phosphate",
+                    "✗ INCORRECT: Fatty acids come from triglycerides, not creatine phosphate"
+                ]
+            },
+            {
+                id: 35,
+                topic: 'muscles',
+                question: "Why does smooth muscle contract more slowly but maintain contraction longer than skeletal muscle?",
+                options: [
+                    "It uses calcium-calmodulin activation of myosin light chain kinase rather than troponin system",
+                    "It has less developed sarcoplasmic reticulum relying on extracellular calcium entry",
+                    "Its cross-bridge cycling rate is slower but uses less ATP per maintained tension",
+                    "All of the above contribute to smooth muscle contraction characteristics"
+                ],
+                correctAnswer: 3,
+                explanation: "Smooth muscle contraction differs from skeletal: 1) Regulation: Calcium binds calmodulin, activates myosin light chain kinase (MLCK), phosphorylates myosin heads for cross-bridge formation (slower), 2) Calcium source: Extracellular and sparse SR, 3) Latch state: Maintains tension with minimal ATP after initial phosphorylation, 4) No troponin-tropomyosin system. These allow sustained contractions (e.g., blood vessels, digestive organs).",
+                optionAnalysis: [
+                    "✗ INCORRECT: Partially correct but incomplete",
+                    "✗ INCORRECT: Partially correct but incomplete",
+                    "✗ INCORRECT: Partially correct but incomplete",
+                    "✓ CORRECT: All factors contribute to smooth muscle characteristics"
+                ]
+            },
+            {
+                id: 36,
+                topic: 'muscles',
+                question: "What causes muscle hypertrophy with resistance training versus muscle atrophy with disuse?",
+                options: [
+                    "Hypertrophy: Fiber diameter increase from added myofibrils; Atrophy: Fiber shrinkage from protein loss",
+                    "Hypertrophy: More muscle fibers develop; Atrophy: Fibers die and are not replaced",
+                    "Hypertrophy: Increased glycogen storage; Atrophy: Decreased mitochondrial content",
+                    "Hypertrophy: Enhanced nerve recruitment; Atrophy: Reduced neuromuscular transmission"
+                ],
+                correctAnswer: 0,
+                explanation: "Resistance training causes hypertrophy primarily through: 1) Increased myofibrils per fiber (more actin/myosin), 2) Increased sarcoplasm volume, 3) Connective tissue strengthening. Fiber number generally doesn't increase in adults. Disuse causes atrophy: 1) Protein degradation exceeds synthesis, 2) Reduced fiber diameter, 3) Possibly fiber loss in extreme cases. These are reversible adaptations.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurate cellular mechanisms",
+                    "✗ INCORRECT: Adult mammals generally don't add new fibers",
+                    "✗ INCORRECT: Glycogen/mitochondria changes occur but not primary",
+                    "✗ INCORRECT: Neural changes occur but not primary structural change"
+                ]
+            },
+            {
+                id: 37,
+                topic: 'muscles',
+                question: "How does the sliding filament theory explain sarcomere shortening during muscle contraction?",
+                options: [
+                    "Thin actin filaments slide past thick myosin filaments toward center of sarcomere",
+                    "Both actin and myosin filaments shorten by contracting their molecular structure",
+                    "Myosin filaments pull Z-discs toward each other while actin remains stationary",
+                    "Cross-bridges form temporary connections that pull entire sarcomere structure inward"
+                ],
+                correctAnswer: 0,
+                explanation: "Sliding filament theory states: 1) Thin (actin) and thick (myosin) filaments slide past each other, 2) Filaments themselves do not shorten, 3) Sarcomere shortens as Z-discs move closer together, 4) A-band (myosin) length constant, I-band and H-zone shorten. Cross-bridge cycling (myosin heads attaching, pivoting, detaching) provides force for sliding.",
+                optionAnalysis: [
+                    "✓ CORRECT: Core principle of sliding filament theory",
+                    "✗ INCORRECT: Filaments don't shorten - they slide",
+                    "✗ INCORRECT: Z-discs move but not pulled by myosin directly",
+                    "✗ INCORRECT: Cross-bridges pull filaments, not entire sarcomere"
+                ]
+            },
+            {
+                id: 38,
+                topic: 'muscles',
+                question: "What is the functional significance of the triad structure in skeletal muscle fibers?",
+                options: [
+                    "It couples T-tubule depolarization with calcium release from sarcoplasmic reticulum",
+                    "It provides structural support maintaining alignment of myofibrils during contraction",
+                    "It facilitates rapid ATP diffusion from mitochondria to myofibrils during activity",
+                    "It allows direct electrical connection between adjacent muscle fibers for synchronization"
+                ],
+                correctAnswer: 0,
+                explanation: "Triads consist of a T-tubule flanked by two terminal cisternae of sarcoplasmic reticulum. They are crucial for excitation-contraction coupling: 1) Action potential down T-tubule activates voltage-sensitive proteins (dihydropyridine receptors), 2) These mechanically couple to calcium release channels (ryanodine receptors) on SR, 3) Calcium floods cytoplasm triggering contraction. This ensures rapid, synchronous calcium release throughout fiber.",
+                optionAnalysis: [
+                    "✓ CORRECT: Primary function in excitation-contraction coupling",
+                    "✗ INCORRECT: Structural support is minor function",
+                    "✗ INCORRECT: ATP diffusion not primary function",
+                    "✗ INCORRECT: Gap junctions provide intercellular connections, not triads"
+                ]
+            },
+            {
+                id: 39,
+                topic: 'muscles',
+                question: "Why does rigor mortis occur after death and then gradually disappear?",
+                options: [
+                    "ATP depletion causes cross-bridges to remain attached; protein degradation later releases them",
+                    "Calcium leakage triggers contraction; muscle decomposition breaks down contractile proteins",
+                    "Lactic acid accumulation lowers pH stabilizing cross-bridges; rising pH later reverses this",
+                    "Cellular swelling stretches sarcomeres; fluid loss later allows relaxation"
+                ],
+                correctAnswer: 0,
+                explanation: "Rigor mortis develops because: 1) After death, metabolism stops → no ATP production, 2) Calcium leaks from SR → cross-bridge formation, 3) Without ATP, cross-bridges can't detach → muscles stiffen. It disappears because: 1) Proteolytic enzymes (released during decomposition) break down proteins, 2) Cross-bridges destroyed → stiffness resolves. Timing depends on temperature, activity before death, etc.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurate mechanism of rigor mortis development and resolution",
+                    "✗ INCORRECT: Calcium triggers but ATP depletion maintains rigor",
+                    "✗ INCORRECT: pH changes occur but not primary mechanism",
+                    "✗ INCORRECT: Cellular swelling not primary mechanism"
+                ]
+            },
+            {
+                id: 40,
+                topic: 'muscles',
+                question: "What advantage does the parallel arrangement of muscle fibers in fusiform muscles provide?",
+                options: [
+                    "Greater range of motion and speed of contraction but less force per cross-sectional area",
+                    "Maximum force production through more fibers packed into given cross-sectional area",
+                    "Resistance to fatigue through better blood supply distribution throughout muscle",
+                    "Multidirectional force application allowing complex movement patterns"
+                ],
+                correctAnswer: 0,
+                explanation: "Fusiform (spindle-shaped) muscles have fibers parallel to long axis. Advantages: 1) Greater range of motion (fibers can shorten more), 2) Faster contraction (shorter distance for shortening). Disadvantage: Fewer fibers per cross-sectional area → less force. Pennate muscles (fibers at angle) have more fibers per area → more force but less shortening range.",
+                optionAnalysis: [
+                    "✓ CORRECT: Accurate trade-off in fiber arrangement",
+                    "✗ INCORRECT: Pennate muscles have more force per area",
+                    "✗ INCORRECT: Blood supply not primarily arrangement-dependent",
+                    "✗ INCORRECT: Multidirectional force from multipennate, not simple parallel"
+                ]
+            }
+        ];
+
+        // Progress tracking
+        let progress = {
+            all: Array(40).fill(false),
+            skeleton: Array(12).fill(false),
+            joints: Array(10).fill(false),
+            muscles: Array(18).fill(false)
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the application
+            initApp();
+            
+            function initApp() {
+                // Set up event listeners for welcome screen
+                document.getElementById('start-btn').addEventListener('click', () => {
+                    document.getElementById('welcome-overlay').classList.add('hidden');
+                });
+                
+                // Hide welcome animation after delay
+                setTimeout(() => {
+                    document.getElementById('welcome-overlay').classList.add('hidden');
+                }, 5000);
+                
+                // Load progress from localStorage
+                loadProgress();
+                
+                // Set up tab navigation
+                setupTabs();
+                
+                // Set up event listeners
+                setupEventListeners();
+                
+                // Load MCQs for initial tab
+                loadTopicMCQs('all');
+                
+                // Update progress display
+                updateProgress();
+                
+                // Apply animations
+                applyAnimations();
+                
+                // Render KaTeX equations
+                renderKaTeX();
+            }
+            
+            function setupTabs() {
+                const tabButtons = document.querySelectorAll('.nav-btn[data-tab]');
+                const tabContents = document.querySelectorAll('.tab-content');
+                
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const tabId = button.getAttribute('data-tab');
+                        
+                        // Update active tab button
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        // Show active content
+                        tabContents.forEach(content => content.classList.remove('active'));
+                        document.getElementById(`${tabId}-tab`).classList.add('active');
+                        
+                        // Load MCQs for this tab if not already loaded
+                        if (tabId !== 'progress') {
+                            loadTopicMCQs(tabId);
+                        }
+                        
+                        // Re-render KaTeX for new content
+                        setTimeout(renderKaTeX, 100);
+                    });
+                });
+            }
+            
+            function setupEventListeners() {
+                // Hamburger menu toggle
+                document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
+                
+                // Theme toggle
+                document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+                
+                // Refresh buttons for each topic
+                document.getElementById('refresh-all').addEventListener('click', () => loadTopicMCQs('all'));
+                document.getElementById('refresh-skeleton').addEventListener('click', () => loadTopicMCQs('skeleton'));
+                document.getElementById('refresh-joints').addEventListener('click', () => loadTopicMCQs('joints'));
+                document.getElementById('refresh-muscles').addEventListener('click', () => loadTopicMCQs('muscles'));
+                
+                // Reset progress button
+                document.getElementById('reset-progress').addEventListener('click', resetProgress);
+            }
+            
+            function toggleMenu() {
+                const menuToggle = document.getElementById('menu-toggle');
+                const mainNav = document.getElementById('main-nav');
+                
+                menuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            }
+            
+            function toggleTheme() {
+                const themeToggle = document.getElementById('theme-toggle');
+                document.body.classList.toggle('dark-mode');
+                themeToggle.classList.toggle('dark');
+                saveToLocalStorage('darkMode', document.body.classList.contains('dark-mode'));
+            }
+            
+            function loadTopicMCQs(topic) {
+                const container = document.getElementById(`${topic}-mcqs-container`);
+                if (!container) return;
+                
+                container.innerHTML = '';
+                
+                // Filter MCQs by topic
+                let mcqs;
+                if (topic === 'all') {
+                    mcqs = supportMovementMCQs;
+                } else {
+                    mcqs = supportMovementMCQs.filter(mcq => mcq.topic === topic);
+                }
+                
+                // Display first 12 MCQs (or all if less)
+                const displayCount = Math.min(mcqs.length, 12);
+                
+                for (let i = 0; i < displayCount; i++) {
+                    const mcq = mcqs[i];
+                    const mcqCard = createMCQCard(mcq, topic);
+                    container.appendChild(mcqCard);
+                }
+                
+                // Add "Load More" button if there are more MCQs
+                if (mcqs.length > displayCount) {
+                    const loadMoreBtn = document.createElement('button');
+                    loadMoreBtn.className = 'btn btn-primary';
+                    loadMoreBtn.innerHTML = `<i class="fas fa-plus"></i> Load More MCQs (${mcqs.length - displayCount} remaining)`;
+                    loadMoreBtn.style.marginTop = '4.86px';
+                    loadMoreBtn.style.width = '100%';
+                    loadMoreBtn.addEventListener('click', () => {
+                        // Load all remaining MCQs
+                        for (let i = displayCount; i < mcqs.length; i++) {
+                            const mcq = mcqs[i];
+                            const mcqCard = createMCQCard(mcq, topic);
+                            container.appendChild(mcqCard);
+                        }
+                        loadMoreBtn.remove();
+                    });
+                    container.appendChild(loadMoreBtn);
+                }
+                
+                // Re-render KaTeX
+                setTimeout(renderKaTeX, 100);
+            }
+            
+            function createMCQCard(mcq, topic) {
+                const card = document.createElement('div');
+                card.className = 'card mcq-card fade-in';
+                card.id = `mcq-${mcq.id}`;
+                
+                // Check if this MCQ has been completed
+                const isCompleted = progress.all[mcq.id - 1];
+                
+                // Randomize option order
+                const options = [...mcq.options];
+                const correctAnswer = mcq.correctAnswer;
+                const correctOption = options[correctAnswer];
+                
+                // Shuffle options
+                for (let i = options.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [options[i], options[j]] = [options[j], options[i]];
+                }
+                
+                // Find new index of correct answer after shuffling
+                const newCorrectIndex = options.indexOf(correctOption);
+                
+                card.innerHTML = `
+                    <div class="mcq-info">
+                        <div class="mcq-id">MCQ #${mcq.id} ${isCompleted ? '<i class="fas fa-check" style="color: var(--success); margin-left: 4.05px;"></i>' : ''}</div>
+                        <div class="mcq-subject">${getTopicName(mcq.topic)}</div>
+                        <div class="mcq-question">${mcq.question}</div>
+                        <div class="mcq-options">
+                            ${options.map((option, index) => `
+                                <div class="mcq-option" data-option="${index}" data-correct="${index === newCorrectIndex}">${String.fromCharCode(65 + index)}) ${option}</div>
+                            `).join('')}
+                        </div>
+                        <div class="mcq-explanation">
+                            <div class="explanation-title">Explanation:</div>
+                            <div class="explanation-content">${mcq.explanation}</div>
+                            ${mcq.optionAnalysis ? `
+                            <div class="option-analysis">
+                                <h5>Option Analysis:</h5>
+                                ${mcq.optionAnalysis.map(analysis => `<p>${analysis}</p>`).join('')}
+                            </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                    <div class="mcq-actions">
+                        <button class="btn btn-primary check-answer-btn">
+                            <i class="fas fa-check"></i> Check Answer
+                        </button>
+                        <button class="btn btn-secondary show-explanation-btn">
+                            <i class="fas fa-lightbulb"></i> Show Explanation
+                        </button>
+                    </div>
+                `;
+                
+                // Add event listeners
+                const checkAnswerBtn = card.querySelector('.check-answer-btn');
+                const showExplanationBtn = card.querySelector('.show-explanation-btn');
+                const optionElements = card.querySelectorAll('.mcq-option');
+                
+                let selectedOption = null;
+                
+                // If already completed, show the correct answer
+                if (isCompleted) {
+                    const correctOptionElement = card.querySelector('.mcq-option[data-correct="true"]');
+                    correctOptionElement.classList.add('correct');
+                    
+                    optionElements.forEach(option => {
+                        option.style.pointerEvents = 'none';
+                    });
+                    
+                    checkAnswerBtn.disabled = true;
+                    checkAnswerBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+                } else {
+                    optionElements.forEach(option => {
+                        option.addEventListener('click', () => {
+                            optionElements.forEach(opt => opt.classList.remove('selected'));
+                            option.classList.add('selected');
+                            selectedOption = parseInt(option.getAttribute('data-option'));
+                        });
+                    });
+                    
+                    checkAnswerBtn.addEventListener('click', () => {
+                        if (selectedOption === null) {
+                            alert('Please select an answer first!');
+                            return;
+                        }
+                        
+                        optionElements.forEach(option => {
+                            option.classList.remove('correct', 'incorrect');
+                        });
+                        
+                        const correctOptionElement = card.querySelector('.mcq-option[data-correct="true"]');
+                        correctOptionElement.classList.add('correct');
+                        
+                        const selectedOptionElement = card.querySelector(`.mcq-option[data-option="${selectedOption}"]`);
+                        const isCorrect = selectedOptionElement.getAttribute('data-correct') === 'true';
+                        
+                        if (!isCorrect) {
+                            selectedOptionElement.classList.add('incorrect');
+                        } else {
+                            // Mark as completed
+                            progress.all[mcq.id - 1] = true;
+                            
+                            // Update topic-specific progress
+                            if (mcq.topic === 'skeleton') {
+                                const skeletonIndex = supportMovementMCQs
+                                    .filter(m => m.topic === 'skeleton')
+                                    .findIndex(m => m.id === mcq.id);
+                                if (skeletonIndex !== -1) {
+                                    progress.skeleton[skeletonIndex] = true;
+                                }
+                            } else if (mcq.topic === 'joints') {
+                                const jointsIndex = supportMovementMCQs
+                                    .filter(m => m.topic === 'joints')
+                                    .findIndex(m => m.id === mcq.id);
+                                if (jointsIndex !== -1) {
+                                    progress.joints[jointsIndex] = true;
+                                }
+                            } else if (mcq.topic === 'muscles') {
+                                const musclesIndex = supportMovementMCQs
+                                    .filter(m => m.topic === 'muscles')
+                                    .findIndex(m => m.id === mcq.id);
+                                if (musclesIndex !== -1) {
+                                    progress.muscles[musclesIndex] = true;
+                                }
+                            }
+                            
+                            saveProgress();
+                            updateProgress();
+                            
+                            const mcqId = card.querySelector('.mcq-id');
+                            mcqId.innerHTML = `MCQ #${mcq.id} <i class="fas fa-check" style="color: var(--success); margin-left: 4.05px;"></i>`;
+                            
+                            optionElements.forEach(option => {
+                                option.style.pointerEvents = 'none';
+                            });
+                            
+                            checkAnswerBtn.disabled = true;
+                            checkAnswerBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+                        }
+                    });
+                }
+                
+                showExplanationBtn.addEventListener('click', () => {
+                    const explanation = card.querySelector('.mcq-explanation');
+                    explanation.classList.toggle('show');
+                });
+                
+                return card;
+            }
+            
+            function getTopicName(topic) {
+                const names = {
+                    skeleton: 'Skeletal System',
+                    joints: 'Joints',
+                    muscles: 'Muscular System',
+                    all: 'Mixed Topics'
+                };
+                return names[topic] || topic;
+            }
+            
+            function updateProgress() {
+                // Calculate completion counts
+                const allCompleted = progress.all.filter(Boolean).length;
+                const skeletonCompleted = progress.skeleton.filter(Boolean).length;
+                const jointsCompleted = progress.joints.filter(Boolean).length;
+                const musclesCompleted = progress.muscles.filter(Boolean).length;
+                
+                // Calculate accuracy (simplified)
+                const totalAttempted = allCompleted; // Since we only track completion
+                const accuracy = totalAttempted > 0 ? Math.round((allCompleted / 40) * 100) : 0;
+                
+                // Update stats
+                document.getElementById('completed-mcqs').textContent = allCompleted;
+                document.getElementById('accuracy').textContent = `${accuracy}%`;
+                
+                // Update progress bars
+                if (document.getElementById('all-completed')) {
+                    document.getElementById('all-completed').textContent = allCompleted;
+                    document.getElementById('all-progress').style.width = `${(allCompleted / 40) * 100}%`;
+                }
+                
+                if (document.getElementById('skeleton-completed')) {
+                    document.getElementById('skeleton-completed').textContent = skeletonCompleted;
+                    document.getElementById('skeleton-progress').style.width = `${(skeletonCompleted / 12) * 100}%`;
+                }
+                
+                if (document.getElementById('joints-completed')) {
+                    document.getElementById('joints-completed').textContent = jointsCompleted;
+                    document.getElementById('joints-progress').style.width = `${(jointsCompleted / 10) * 100}%`;
+                }
+                
+                if (document.getElementById('muscles-completed')) {
+                    document.getElementById('muscles-completed').textContent = musclesCompleted;
+                    document.getElementById('muscles-progress').style.width = `${(musclesCompleted / 18) * 100}%`;
+                }
+                
+                // Update overall progress
+                document.getElementById('overall-completed').textContent = allCompleted;
+                document.getElementById('overall-progress').style.width = `${(allCompleted / 40) * 100}%`;
+                
+                // Update summary
+                if (document.getElementById('skeleton-summary')) {
+                    document.getElementById('skeleton-summary').textContent = skeletonCompleted;
+                    document.getElementById('skeleton-summary-progress').style.width = `${(skeletonCompleted / 12) * 100}%`;
+                }
+                
+                if (document.getElementById('joints-summary')) {
+                    document.getElementById('joints-summary').textContent = jointsCompleted;
+                    document.getElementById('joints-summary-progress').style.width = `${(jointsCompleted / 10) * 100}%`;
+                }
+                
+                if (document.getElementById('muscles-summary')) {
+                    document.getElementById('muscles-summary').textContent = musclesCompleted;
+                    document.getElementById('muscles-summary-progress').style.width = `${(musclesCompleted / 18) * 100}%`;
+                }
+            }
+            
+            function resetProgress() {
+                if (confirm('Are you sure you want to reset all progress? This action cannot be undone.')) {
+                    progress = {
+                        all: Array(40).fill(false),
+                        skeleton: Array(12).fill(false),
+                        joints: Array(10).fill(false),
+                        muscles: Array(18).fill(false)
+                    };
+                    saveProgress();
+                    updateProgress();
+                    // Reload current tab MCQs
+                    const activeTab = document.querySelector('.nav-btn.active').getAttribute('data-tab');
+                    if (activeTab !== 'progress') {
+                        loadTopicMCQs(activeTab);
+                    }
+                }
+            }
+            
+            function saveProgress() {
+                saveToLocalStorage('supportMovementProgress', progress);
+            }
+            
+            function loadProgress() {
+                const savedProgress = getFromLocalStorage('supportMovementProgress');
+                if (savedProgress) {
+                    progress = savedProgress;
+                }
+            }
+            
+            function applyAnimations() {
+                const elements = document.querySelectorAll('.panel, .card, .nav-btn');
+                elements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('fade-in');
+                    }, index * 50);
+                });
+            }
+            
+            function renderKaTeX() {
+                if (typeof renderMathInElement !== 'undefined') {
+                    renderMathInElement(document.body, {
+                        delimiters: [
+                            {left: '$$', right: '$$', display: true},
+                            {left: '$', right: '$', display: false},
+                            {left: '\\(', right: '\\)', display: false},
+                            {left: '\\[', right: '\\]', display: true}
+                        ],
+                        throwOnError: false
+                    });
+                }
+            }
+            
+            function saveToLocalStorage(key, value) {
+                try {
+                    localStorage.setItem(key, JSON.stringify(value));
+                } catch (e) {
+                    console.error('Error saving to localStorage:', e);
+                }
+            }
+            
+            function getFromLocalStorage(key) {
+                try {
+                    const value = localStorage.getItem(key);
+                    return value ? JSON.parse(value) : null;
+                } catch (e) {
+                    console.error('Error reading from localStorage:', e);
+                    return null;
+                }
+            }
+            
+            // Load dark mode setting
+            const darkMode = getFromLocalStorage('darkMode');
+            if (darkMode) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-toggle').classList.add('dark');
+            }
+        });
+    </script>
+</body>
+</html>
